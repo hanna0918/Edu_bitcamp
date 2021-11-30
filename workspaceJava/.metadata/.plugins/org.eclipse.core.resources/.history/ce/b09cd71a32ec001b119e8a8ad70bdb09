@@ -1,0 +1,38 @@
+import java.awt.BorderLayout;
+import java.awt.Font;
+import java.awt.GridLayout;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+public class setMenuLayout extends JFrame{
+	Font font = new Font("돋움", Font.BOLD, 15);
+	// Panel - north 
+	JPanel northPane = new JPanel(new GridLayout(1,7));
+		JButton[] btn = {new JButton("Home"), new JButton("현재공연작"), new JButton("공연예정작"), new JButton("예매하기"), 
+                new JButton("MY PAGE"), new JButton("찾아오는 길"), new JButton("로그아웃")};
+	 
+	public setLayout() {
+
+		//northPane
+		setMenuBar();
+
+
+		setSize(1200,1000);
+		setVisible(true);
+		setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+
+	}
+
+	public void setMenuBar() {
+		northPane.add(BorderLayout.NORTH, northPane);
+		for(int i=0; i<btn.length; i++) {
+			northPane.add(btn[i]);
+		}
+	}
+
+}
+
+
+

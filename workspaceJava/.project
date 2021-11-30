@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>workspaceJava</name>
+	<comment></comment>
+	<projects>
+		<project>java01_basic</project>
+		<project>java02_api</project>
+	</projects>
+	<buildSpec>
+	</buildSpec>
+	<natures>
+	</natures>
+</projectDescription>

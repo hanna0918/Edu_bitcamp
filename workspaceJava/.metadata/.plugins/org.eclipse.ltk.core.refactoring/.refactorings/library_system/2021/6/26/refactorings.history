@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;book.BookDataSet&apos; to &apos;BookShelf&apos;&#x0D;&#x0A;- Original project: &apos;library_system&apos;&#x0D;&#x0A;- Original element: &apos;book.BookDataSet&apos;&#x0D;&#x0A;- Renamed element: &apos;book.BookShelf&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;BookDataSet&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;book{BookDataSet.java[BookDataSet" matchStrategy="1" name="BookShelf" qualified="false" references="true" similarDeclarations="false" stamp="1624671777520" textual="false" version="1.0"/>
+</session>

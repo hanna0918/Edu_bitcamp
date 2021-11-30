@@ -1,0 +1,93 @@
+import java.awt.BorderLayout;
+import java.awt.Dimension;
+import java.awt.Font;
+import java.awt.GridLayout;
+
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+
+public class MainPage extends JFrame{
+	//ImageIcon homeImg = new ImageIcon("img/homeBtn.png");
+	ImageIcon draculaImg = new ImageIcon("img/dracula.jpg");
+	ImageIcon kinkyImg = new ImageIcon("img/kinky.jpg");
+	ImageIcon laughsImg = new ImageIcon("img/laughs.jpg");
+	ImageIcon maybeImg = new ImageIcon("img/maybe.jpg");
+	ImageIcon rentImg = new ImageIcon("img/rent.jpg");
+	ImageIcon catImg = new ImageIcon("img/cat1.JPG");
+	
+	Font font = new Font("돋움", Font.BOLD, 15);
+	// Panel - north 
+	JPanel northPane = new JPanel(new GridLayout(1,7));
+		JButton[] btn = {new JButton("Home"), new JButton("현재공연작"), new JButton("공연예정작"), new JButton("예매하기"), 
+                new JButton("MY PAGE"), new JButton("찾아오는 길"), new JButton("로그아웃")};
+		
+	// Panel - center	
+	JPanel centerPane = new JPanel(new BorderLayout());
+		JButton mainImgBtn = new JButton(catImg);
+	
+	// Panel - south
+	JPanel southPane = new JPanel(new BorderLayout());
+		JPanel southInPane = new JPanel();
+		JButton rankBtn1 = new JButton(draculaImg);
+		JButton rankBtn2 = new JButton(kinkyImg);
+		JButton rankBtn3 = new JButton(laughsImg);
+		JButton rankBtn4 = new JButton(maybeImg);
+		JButton rankBtn5 = new JButton(rentImg);
+		JLabel lbl = new JLabel(" ");	 
+		
+	
+	public MainPage() {
+		
+		//northPane
+        setMenuBar();
+		
+		//centerPane
+		mainImgBtn.setPreferredSize(new Dimension(800, 300));
+		mainImgBtn.setBorderPainted(false);
+		mainImgBtn.setContentAreaFilled(false);
+		centerPane.add("Center", mainImgBtn);
+		add("Center", centerPane);
+		
+		//southPane
+		lbl.setFont(font);
+		rankBtn1.setSize(100,200);
+		rankBtn2.setSize(100,200);
+		rankBtn3.setSize(100,200);
+		rankBtn4.setSize(100,200);
+		rankBtn5.setSize(100,200);
+		
+		southInPane.add(rankBtn1);
+		southInPane.add(rankBtn2);
+		southInPane.add(rankBtn3);
+		southInPane.add(rankBtn4);
+		southInPane.add(rankBtn5);
+		southInPane.add(BorderLayout.SOUTH, lbl);
+		southPane.add("Center", southInPane);
+		
+		add("South", southPane);
+		
+		
+
+		setSize(1200,1000);
+		setResizable(false);
+		setVisible(true);
+		setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+        
+	}
+          
+	public void setMenuBar() {
+		centerPane.add(BorderLayout.NORTH, northPane);
+        for(int i=0; i<btn.length; i++) {
+           northPane.add(btn[i]);
+        }
+	}
+
+	public static void main(String[] args) {
+		new MainPage();
+
+	}
+
+}

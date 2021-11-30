@@ -1,0 +1,129 @@
+import java.awt.BorderLayout;
+import java.awt.FlowLayout;
+import java.awt.GridLayout;
+
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+
+public class UnopenPerform {
+	JFrame j = new JFrame();
+	
+	JPanel northPane = new JPanel(new GridLayout(1,7));
+	JButton[] btn = {new JButton("Home"), new JButton("현재공연작"), new JButton("공연예정작"), new JButton("예매하기"), 
+            new JButton("MY PAGE"), new JButton("찾아오는 길"), new JButton("로그아웃")};
+	
+	ImageIcon maybeImg = new ImageIcon("img/maybe.jpg");
+	JPanel pane = new JPanel();
+	
+	JPanel imgPane1, imgPane2, imgPane3, imgPane4, imgPane5, imgPane6, imgPane7, imgPane8;
+	JButton imgBtn1 = new JButton(maybeImg);
+	JButton imgBtn2 = new JButton(maybeImg);
+	JButton imgBtn3 = new JButton(maybeImg);
+	JButton imgBtn4 = new JButton(maybeImg);
+	JButton imgBtn5 = new JButton(maybeImg);
+	JButton imgBtn6 = new JButton(maybeImg);
+	JButton imgBtn7 = new JButton(maybeImg);
+	JButton imgBtn8 = new JButton(maybeImg);
+	
+	JLabel titleLbl1, titleLbl2, titleLbl3, titleLbl4, titleLbl5, titleLbl6, titleLbl7, titleLbl8;
+	
+	int x = 90;
+	int y = 165;
+	
+	public UnopenPerform() {
+		setMenuBar();
+		setImgPanel();
+		
+		pane.setLayout(null);
+
+		j.setSize(1200,1000);
+		j.setResizable(false);
+		j.setVisible(true);
+		j.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+
+	}
+	
+	
+	
+	
+	public void setImgPanel() {
+		imgPane1 = new JPanel(new BorderLayout());
+		imgBtn1.setBorderPainted(false);
+		imgBtn1.setContentAreaFilled(false);
+		titleLbl1 = new JLabel("예매하기");
+		imgPane1.add(imgBtn1);
+		imgPane1.add("South",titleLbl1);
+		pane.add(imgPane1);
+		imgPane1.setBounds(x,y,200,260);
+		
+		imgPane2 = new JPanel(new FlowLayout());
+		imgBtn2.setBorderPainted(false);
+		imgBtn2.setContentAreaFilled(false);
+		imgPane2.add(imgBtn2);
+		pane.add(imgPane2);
+		imgPane2.setBounds(x+270,y,200,260);
+		
+		imgPane3 = new JPanel(new FlowLayout());
+		imgBtn3.setBorderPainted(false);
+		imgBtn3.setContentAreaFilled(false);
+		imgPane3.add(imgBtn3);
+		pane.add(imgPane3);
+		imgPane3.setBounds(x+540,y,200,260);
+		
+		imgPane4 = new JPanel(new FlowLayout());
+		imgBtn4.setBorderPainted(false);
+		imgBtn4.setContentAreaFilled(false);
+		imgPane4.add(imgBtn4);
+		pane.add(imgPane4);
+		imgPane4.setBounds(x+810,y,200,260);
+		
+		imgPane5 = new JPanel(new FlowLayout());
+		imgBtn5.setBorderPainted(false);
+		imgBtn5.setContentAreaFilled(false);
+		imgPane5.add(imgBtn5);
+		pane.add(imgPane5);
+		imgPane5.setBounds(x,y+360,200,260);
+		
+		imgPane6 = new JPanel(new FlowLayout());
+		imgBtn6.setBorderPainted(false);
+		imgBtn6.setContentAreaFilled(false);
+		imgPane6.add(imgBtn6);
+		pane.add(imgPane6);
+		imgPane6.setBounds(x+270,y+360,200,260);
+		
+		imgPane7 = new JPanel(new FlowLayout());
+		imgBtn7.setBorderPainted(false);
+		imgBtn7.setContentAreaFilled(false);
+		imgPane7.add(imgBtn7);
+		pane.add(imgPane7);
+		imgPane7.setBounds(x+540,y+360,200,260);
+		
+		imgPane8 = new JPanel(new FlowLayout());
+		imgBtn8.setBorderPainted(false);
+		imgBtn8.setContentAreaFilled(false);
+		imgPane8.add(imgBtn8);
+		pane.add(imgPane8);
+		imgPane8.setBounds(x+810,y+360,200,260);
+		
+		
+		j.add(BorderLayout.CENTER,pane);
+		
+				
+	}
+	public void setMenuBar() {
+		j.add(BorderLayout.NORTH, northPane);
+		for(int i=0; i<btn.length; i++) {
+			northPane.add(btn[i]);
+		}
+	}
+	
+
+	public static void main(String[] args) {
+		new UnopenPerform();
+
+	}
+
+}

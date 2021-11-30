@@ -1,0 +1,74 @@
+import java.awt.BorderLayout;
+import java.awt.Font;
+import java.awt.GridLayout;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+
+public class IntroMain extends JFrame{
+	Font ftn = new Font("돋움", Font.BOLD, 70);
+	JPanel title, middlePane, menuPane, searchPane, rowPane;
+	JLabel titleLbl ;
+	JButton searchBtn, nowBtn, willBtn, bookingBtn, seatBtn, toolBtn;
+	JTextField searchTf;
+	
+	
+	public IntroMain() {
+		title = new JPanel();
+		titleLbl = new JLabel("타이틀");
+		titleLbl.setFont(ftn);
+		title.add(titleLbl);
+		add(BorderLayout.NORTH, title);
+		
+		//메뉴
+		searchBtn = new JButton("ㅇ");
+		searchTf = new JTextField();
+		//searchTf.setSize();
+		
+		menuPane= new JPanel();
+		menuPane.add(searchBtn);
+		menuPane.add(searchTf);
+		
+		nowBtn = new JButton("현재공연작");
+		willBtn = new JButton("공연예정작");
+		bookingBtn = new JButton("예매하기");
+		seatBtn =new JButton("좌석현황");
+		toolBtn = new JButton("삼선");
+		searchPane = new JPanel(new GridLayout(1,5));
+		searchPane.add(nowBtn);
+		searchPane.add(willBtn);
+		searchPane.add(bookingBtn);
+		searchPane.add(seatBtn);
+		searchPane.add(toolBtn);
+		
+		
+		middlePane = new JPanel();
+		middlePane.setLayout(new BorderLayout());
+		middlePane.add(BorderLayout.NORTH, menuPane);
+		middlePane.add(BorderLayout.CENTER,searchPane);
+		
+		add(BorderLayout.CENTER, middlePane);
+		
+		//row
+		rowPane = new JPanel();
+		rowPane.setLayout(null);
+		
+		
+		
+		
+		setSize(1500,1200);
+		setVisible(true);
+		setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+		
+		
+	}
+
+	public static void main(String[] args) {
+		new IntroMain();
+
+	}
+
+}

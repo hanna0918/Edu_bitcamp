@@ -1,0 +1,52 @@
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.GridLayout;
+
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+
+public class CalendarHw extends JFrame{
+	String wol[] = {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"};
+	String weekStr[] = {"일","월","화","수","목","금","토"};
+	JButton right = new JButton("▶");
+	JButton left = new JButton("◀");
+	JComboBox year = new JComboBox();
+	JComboBox month = new JComboBox(wol);
+	JPanel day, cal = new JPanel();
+	JLabel yearLbl = new JLabel("년");
+	JLabel monthLbl = new JLabel("월");
+	JLabel date[] = new JLabel[49];
+	
+	
+	public CalendarHw() {
+		super.add(BorderLayout.NORTH, day);
+		super.add(BorderLayout.SOUTH, cal);
+		day.setBackground(Color.CYAN);
+		
+		//day패널에 컴포넌트 추가
+		day.add(left);
+		day.add(year);
+		day.add(yearLbl);
+		day.add(month);
+		day.add(monthLbl);
+		day.add(right);
+		
+		
+		
+		
+		
+		super.setTitle("캘린더");
+		super.setVisible(true);
+		super.setSize(500,500);
+		super.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+	}
+
+	public static void main(String[] args) {
+		new CalendarHw();
+		
+	}
+
+}

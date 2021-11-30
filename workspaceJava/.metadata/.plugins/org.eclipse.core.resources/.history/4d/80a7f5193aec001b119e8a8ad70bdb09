@@ -1,0 +1,98 @@
+import java.awt.BorderLayout;
+import java.awt.GridLayout;
+
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JPanel;
+
+public class NowPerform {
+	setMenuLayout layout = new setMenuLayout();
+	
+	ImageIcon maybeImg = new ImageIcon("img/maybe.jpg");
+	JPanel pane = new JPanel();
+	
+	JPanel imgPane1, imgPane2, imgPane3, imgPane4, imgPane5, imgPane6, imgPane7, imgPane8;
+	JButton imgBtn1 = new JButton(maybeImg);
+	JButton imgBtn2 = new JButton(maybeImg);
+	JButton imgBtn3 = new JButton(maybeImg);
+	JButton imgBtn4 = new JButton(maybeImg);
+	JButton imgBtn5 = new JButton(maybeImg);
+	JButton imgBtn6 = new JButton(maybeImg);
+	JButton imgBtn7 = new JButton(maybeImg);
+	JButton imgBtn8 = new JButton(maybeImg);
+
+	JButton bookBtn1 = new JButton("예매하기");
+	JButton bookBtn2 = new JButton("예매하기");
+	JButton bookBtn3 = new JButton("예매하기");
+	JButton bookBtn4 = new JButton("예매하기");
+	JButton bookBtn5 = new JButton("예매하기");
+	JButton bookBtn6 = new JButton("예매하기");
+	JButton bookBtn7 = new JButton("예매하기");
+	JButton bookBtn8 = new JButton("예매하기");
+	
+	 
+	public NowPerform() {
+		layout.setMenuBar();
+		
+		setImgPanel();
+		
+		
+		
+		
+		
+		
+	}
+	
+	
+	public void setImgPanel() {
+		imgPane1 = new JPanel(new GridLayout(2,1));
+		imgPane1.add(imgBtn1);
+		imgPane1.add(bookBtn1);
+		pane.add(imgPane1);
+		
+		imgPane2 = new JPanel(new GridLayout(2,1));
+		imgPane2.add(imgBtn2);
+		imgPane2.add(bookBtn2);
+		pane.add(imgPane2);
+		
+		imgPane3 = new JPanel(new GridLayout(2,1));
+		imgPane3.add(imgBtn3);
+		imgPane3.add(bookBtn3);
+		pane.add(imgPane3);
+		
+		imgPane4 = new JPanel(new GridLayout(2,1));
+		imgPane4.add(imgBtn4);
+		imgPane4.add(bookBtn4);
+		pane.add(imgPane4);
+		
+		imgPane5 = new JPanel(new GridLayout(2,1));
+		imgPane5.add(imgBtn5);
+		imgPane5.add(bookBtn5);
+		pane.add(imgPane5);
+		
+		imgPane6 = new JPanel(new GridLayout(2,1));
+		imgPane6.add(imgBtn6);
+		imgPane6.add(bookBtn6);
+		pane.add(imgPane6);
+		
+		imgPane7 = new JPanel(new GridLayout(2,1));
+		imgPane7.add(imgBtn7);
+		imgPane7.add(bookBtn7);
+		pane.add(imgPane7);
+		
+		imgPane8 = new JPanel(new GridLayout(2,1));
+		imgPane8.add(imgBtn8);
+		imgPane8.add(bookBtn8);
+		pane.add(imgPane8);
+		
+		layout.add(BorderLayout.CENTER,pane);
+		
+		
+	}
+
+	public static void main(String[] args) {
+		new NowPerform();
+	}
+
+}
+

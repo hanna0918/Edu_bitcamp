@@ -1,0 +1,102 @@
+import java.awt.BorderLayout;
+import java.awt.GridLayout;
+
+import javax.swing.ButtonGroup;
+import javax.swing.DefaultComboBoxModel;
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JRadioButton;
+
+public class BookingPage extends JFrame {
+	// Panel - north 
+		JPanel northPane = new JPanel(new GridLayout(1,7));
+			JButton[] btn = {new JButton("Home"), new JButton("현재공연작"), new JButton("공연예정작"), new JButton("예매하기"), 
+	                new JButton("MY PAGE"), new JButton("찾아오는 길"), new JButton("로그아웃")};
+	// Panel - center
+		JPanel centerPane = new JPanel(new GridLayout(1,3));
+			JPanel leftPane, midPane, rightPane;
+				//left
+				JButton[] titleBtn = {new JButton("        title       "), new JButton("       title       "), new JButton("       title       "), 
+									new JButton("       title       "),	new JButton("       title       "), new JButton("       title       ")};
+				//middle
+				JLabel dateLbl, cntLbl, timeLbl;
+				DefaultComboBoxModel<String> dateModel = new DefaultComboBoxModel<String>();
+				JComboBox<String> date = new JComboBox<String>();
+				
+				String[] count = {"1", "2", "3", "4", "5"};
+				JComboBox<String> tkCnt = new JComboBox<String>(count);
+				
+				JRadioButton firTimeRbtn = new JRadioButton("13:30");
+				JRadioButton secTimeRbtn = new JRadioButton("18:30");
+				ButtonGroup bg = new ButtonGroup();
+				
+				//좌석선택
+				JButton seatBtn, payBtn;
+				
+	public BookingPage() {
+		
+		//northPane
+        setMenuBar();
+		add(BorderLayout.CENTER, centerPane);
+		setCenterPane();
+		
+		setSize(1200,1000);
+		setResizable(false);
+		setVisible(true);
+		setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+        
+	}
+
+	public void setCenterPane() {
+		//left
+		leftPane = new JPanel();
+		for(int i=0; i<titleBtn.length; i++) {
+			leftPane.add(titleBtn[i]);
+		}
+		
+		//middle
+		midPane = new JPanel(new GridLayout(3,1));
+		dateLbl = new JLabel("날    짜");
+		midPane.add(dateLbl);
+		midPane.add(date);
+		cntLbl = new JLabel("관람인원");
+		midPane.add(cntLbl);
+		midPane.add(tkCnt);
+		bg.add(firTimeRbtn);
+		bg.add(secTimeRbtn);
+		timeLbl = new JLabel("관람시간");
+		midPane.add(timeLbl);
+		midPane.add(firTimeRbtn);
+		midPane.add(secTimeRbtn);
+		
+		//right
+		
+		rightPane = new JPanel(new BorderLayout());
+		seatBtn = new JButton("좌                 석                선                택 ");
+		payBtn = new JButton("결제하기");
+		rightPane.add(BorderLayout.CENTER, seatBtn);
+		rightPane.add(BorderLayout.SOUTH, payBtn);
+		
+		
+		
+		centerPane.add(leftPane);
+		centerPane.add(midPane);
+		centerPane.add(rightPane);		
+		
+		
+	}
+	public void setMenuBar() {
+		add(BorderLayout.NORTH, northPane);
+        for(int i=0; i<btn.length; i++) {
+           northPane.add(btn[i]);
+        }
+	}
+	
+	public static void main(String[] args) {
+		new BookingPage();
+	}
+
+}

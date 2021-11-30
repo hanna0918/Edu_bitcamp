@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;LottoOOP&apos; to &apos;LottoOOPCollection&apos;&#x0D;&#x0A;- Original project: &apos;java07_collections&apos;&#x0D;&#x0A;- Original element: &apos;LottoOOP&apos;&#x0D;&#x0A;- Renamed element: &apos;LottoOOPCollection&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;LottoOOP&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;{LottoOOP.java[LottoOOP" matchStrategy="1" name="LottoOOPCollection" qualified="false" references="true" similarDeclarations="false" stamp="1624258671533" textual="false" version="1.0"/>
+</session>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename method &apos;membership.Login.login()&apos; to &apos;loginmem&apos;&#x0D;&#x0A;- Original project: &apos;library_system&apos;&#x0D;&#x0A;- Original element: &apos;membership.Login.login()&apos;&#x0D;&#x0A;- Renamed element: &apos;membership.Login.loginmem()&apos;&#x0D;&#x0A;- Update references to refactored element" delegate="false" deprecate="false" description="Rename method &apos;login&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.method" input="/src&lt;membership{Login.java[Login~login" name="loginmem" references="true" stamp="1624759626205" version="1.0"/>
+</session>

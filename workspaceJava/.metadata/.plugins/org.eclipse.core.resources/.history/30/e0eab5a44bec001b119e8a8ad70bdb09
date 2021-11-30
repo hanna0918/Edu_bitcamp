@@ -1,0 +1,13 @@
+import javax.swing.JFrame;
+
+public class BookingPage extends JFrame {
+	
+	public BookingPage() {
+		
+	}
+
+	public static void main(String[] args) {
+		new BookingPage();
+	}
+
+}

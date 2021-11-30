@@ -1,0 +1,43 @@
+1627207015852	Rename field 'mobailrBtn'
+1627213335410	Delete element
+1627270684429	Rename compilation unit 'Poster.java'
+1627348407872	Rename type 'memberVO'
+1627348421339	Rename type 'emberVO'
+1627348864376	Delete element
+1627349324306	Delete element
+1627370112012	Rename field 'nameLbl'
+1627370141202	Rename field 'nameTf'
+1627370153043	Rename field 'idLbl'
+1627370159767	Rename field 'idTf'
+1627370167262	Rename field 'pwdLbl'
+1627370172268	Rename field 'pwdTf'
+1627376722281	Rename field 'editMemBtn'
+1627472681780	Rename field 'payTitle'
+1627472692339	Rename field 'payModel'
+1627472701044	Rename field 'payTable'
+1627472709545	Rename field 'paySp'
+1627472722792	Rename field 'payTablePane'
+1627473954179	Rename local variable 'list'
+1627520938817	Delete element
+1627528383636	Copy compilation units
+1627528417904	Delete element
+1627528854916	Delete element
+1627528870549	Rename type 'statMng'
+1627531155160	Rename type 'MemberDAO'
+1627540448363	Rename field 'titleBtn'
+1627540463345	Rename field 'model'
+1627540534546	Rename field 'titleModel'
+1627545562165	Rename type 'musicalMng'
+1627546327911	Rename field 'storyTf'
+1627549560960	Rename field 'correctBtn'
+1627549575828	Rename field 'updateBtn'
+1627610597122	Rename local variable 'muVO'
+1627612282390	Rename local variable 'MuVO'
+1627629485559	Rename type 'ImgSave'
+1627629505862	Rename type 'ImgOpen'
+1627630164533	Rename type 'UpdateImg'
+1627636122985	Rename field 'posterLbl'
+1627694845834	Delete element
+1627697000720	Rename method 'updateImg'
+1627699178164	Rename local variable 'muDao'
+1627703380681	Rename local variable 'muVO'

@@ -1,0 +1,55 @@
+import java.awt.BorderLayout;
+
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JPanel;
+
+public class NowPerform {
+	setMenuLayout layout = new setMenuLayout();
+	
+	ImageIcon maybeImg = new ImageIcon("img/maybe.jpg");
+	JPanel Pane = new JPanel();
+	
+	JPanel[] imgPane = {new JPanel(new BorderLayout()), new JPanel(new BorderLayout()), new JPanel(new BorderLayout()), new JPanel(new BorderLayout()), 
+					new JPanel(new BorderLayout()), new JPanel(new BorderLayout()), new JPanel(new BorderLayout()), new JPanel(new BorderLayout())};
+	
+	JButton []postBtn = {new JButton(maybeImg), new JButton(maybeImg), new JButton(maybeImg), new JButton(maybeImg), new JButton(maybeImg),
+				new JButton(maybeImg), new JButton(maybeImg), new JButton(maybeImg)};
+	
+	
+	JButton [] bookBtn = {new JButton("예매하기"), new JButton("예매하기"), new JButton("예매하기"), new JButton("예매하기"), new JButton("예매하기"),
+							new JButton("예매하기"), new JButton("예매하기"), new JButton("예매하기")};
+	
+	 
+	public NowPerform() {
+		layout.setMenuBar();
+		
+		setImgPanel();
+		
+		layout.add(Pane);
+		
+		
+		
+		
+	}
+	
+	
+	public void setImgPanel() {
+		
+		for(int i=0; i<imgPane.length; i++) {
+			imgPane[i].add(BorderLayout.CENTER, postBtn[i]);
+			imgPane[i].add(BorderLayout.SOUTH, bookBtn[i]);
+			Pane.add(imgPane[i]);
+			
+		}
+		layout.add("Center", Pane);
+		
+		
+	}
+
+	public static void main(String[] args) {
+		new NowPerform();
+	}
+
+}
+

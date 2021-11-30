@@ -1,0 +1,16 @@
+
+public class NowPerform {
+	 
+	
+	public NowPerform() {
+		setMenuLayout layout = new setMenuLayout();
+		layout.setMenuBar();
+		
+	}
+
+	public static void main(String[] args) {
+		new NowPerform();
+	}
+
+}
+

@@ -1,0 +1,74 @@
+import java.awt.GridLayout;
+
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+public class MainPage extends JFrame{
+	ImageIcon homeImg = new ImageIcon("img/homeBtn.png");
+	ImageIcon draculaImg = new ImageIcon("img/dracula.jpg");
+	ImageIcon kinkyImg = new ImageIcon("img/kinky.jpg");
+	ImageIcon laughsImg = new ImageIcon("img/laughs.jpg");
+	ImageIcon maybeImg = new ImageIcon("img/maybe.jpg");
+	ImageIcon rentImg = new ImageIcon("img/rent.jpg");
+	
+	// Panel - north 
+	JPanel northPane = new JPanel(new GridLayout(1,7));
+		JButton homeBtn = new JButton(homeImg);
+		JButton nowBtn = new JButton("현재공연작");
+		JButton unopenedBtn = new JButton("공연예정작");
+		JButton bookingBtn = new JButton("예매하기");
+		JButton myPageBtn = new JButton("My Page");
+		JButton wayBtn = new JButton("찾아오는길");
+		JButton logoutBtn = new JButton("로그아웃");
+	
+	// Panel - center	
+	JPanel centerPane = new JPanel();
+		JButton mainImgBtn = new JButton();
+	
+	// Panel - south
+	JPanel southPane = new JPanel();
+		JButton rankBtn1 = new JButton(draculaImg);
+		JButton rankBtn2 = new JButton(kinkyImg);
+		JButton rankBtn3 = new JButton(laughsImg);
+		JButton rankBtn4 = new JButton(maybeImg);
+		JButton rankBtn5 = new JButton(rentImg);
+		
+	
+	public MainPage() {
+		//northPane
+		northPane.add(homeBtn);
+		northPane.add(nowBtn);
+		northPane.add(unopenedBtn);
+		northPane.add(bookingBtn);
+		northPane.add(myPageBtn);
+		northPane.add(wayBtn);
+		northPane.add(logoutBtn);
+		add("North", northPane);
+		
+		//centerPane
+		centerPane.add(mainImgBtn);
+		add("Center", centerPane);
+		
+		//southPane
+		southPane.add(rankBtn1);
+		southPane.add(rankBtn2);
+		southPane.add(rankBtn3);
+		southPane.add(rankBtn4);
+		southPane.add(rankBtn5);
+		
+		
+		
+		
+		setSize(1200,1000);
+		setVisible(true);
+		setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+	}
+
+	public static void main(String[] args) {
+		new MainPage();
+
+	}
+
+}

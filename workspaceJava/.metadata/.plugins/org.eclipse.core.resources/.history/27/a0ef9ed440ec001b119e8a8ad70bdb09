@@ -1,0 +1,52 @@
+import java.awt.BorderLayout;
+import java.awt.GridLayout;
+
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+public class UnopenPerform {
+	JFrame j = new JFrame();
+	
+	JPanel northPane = new JPanel(new GridLayout(1,7));
+	JButton[] btn = {new JButton("Home"), new JButton("현재공연작"), new JButton("공연예정작"), new JButton("예매하기"), 
+            new JButton("MY PAGE"), new JButton("찾아오는 길"), new JButton("로그아웃")};
+	
+	ImageIcon maybeImg = new ImageIcon("img/maybe.jpg");
+	JPanel pane = new JPanel(new GridLayout(2,4));
+	
+	JPanel imgPane1, imgPane2, imgPane3, imgPane4, imgPane5, imgPane6, imgPane7, imgPane8;
+	JButton imgBtn1 = new JButton(maybeImg);
+	JButton imgBtn2 = new JButton(maybeImg);
+	JButton imgBtn3 = new JButton(maybeImg);
+	JButton imgBtn4 = new JButton(maybeImg);
+	JButton imgBtn5 = new JButton(maybeImg);
+	JButton imgBtn6 = new JButton(maybeImg);
+	JButton imgBtn7 = new JButton(maybeImg);
+	JButton imgBtn8 = new JButton(maybeImg);
+
+	public UnopenPerform() {
+		setMenuBar();
+		setImgPanel();
+		
+
+		j.setSize(1200,1000);
+		j.setVisible(true);
+		j.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+
+	}
+	public void setMenuBar() {
+		j.add(BorderLayout.NORTH, northPane);
+		for(int i=0; i<btn.length; i++) {
+			northPane.add(btn[i]);
+		}
+	}
+	
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

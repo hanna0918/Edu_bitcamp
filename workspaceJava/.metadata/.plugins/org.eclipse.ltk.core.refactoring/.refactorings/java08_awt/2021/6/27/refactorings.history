@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;dinosaur.png&apos; to &apos;img&apos;&#x0D;&#x0A;- Original project: &apos;java08_awt&apos;&#x0D;&#x0A;- Destination element: &apos;img&apos;&#x0D;&#x0A;- Original element: &apos;dinosaur.png&apos;" description="Copy file" element1="img/dinosaur.png" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1625014252269" target="/java09_swing/img" units="0" version="1.0"/>
+</session>
