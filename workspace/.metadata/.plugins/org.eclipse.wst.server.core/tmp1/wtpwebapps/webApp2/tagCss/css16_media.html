@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<style>
+	ul,li{margin:0; padding:0; list-style-type:none;}
+	li{background:lightblue; margin:10px; border:1px solid #ddd;
+		width:98%;
+	}
+	
+	/* @media 반응형 스타일 지정 */
+	/* 0 ~ 600px */
+	/* 	   all, screen, tv, projection.... */
+	@media all and (min-width:320px) and (max-width:600px){
+		li{background-color:yellow;}
+		li>img{width:20%; display:none;}
+	}
+	/* 600px ~ 900px */
+	@media all and (min-width:601px) and (max-width:900px){
+		li{background-color:pink;}
+	}
+	/* 900px~ */
+	@media all and(min-width:901px){
+		li{background-color:black; width:49%; color:white; float:left;}
+	}
+</style>
+</head>
+<body>
+<ul>
+		<li>소행성‘베누’는 1999년에 발견됐습니다. 마름모꼴 모양이고 지름이 약 500m에 이릅니다. 소행성 중에서는
+			중간 정도 크기로 질량은 약 1억 4000만 톤이어서 가볍지 않습니다.</li>
+		<li>이런 베누가 태양 주변을 공전하고 있어서 옛날부터 지구와 충돌할 가능성이 있다는 얘기가 나왔습니다. 과학자들은
+			베누가 현재 지구에게 가장 위협적인 소행성 중 하나라고 보고 있습니다.</li>
+		<li>2014년 9월에 지름이 18m인 소행성이 지구를 스쳐 지나갔습니다. 다행히도 별일 없었습니다.(충돌했다는
+			뉴스가 없는 걸로 봐서 말 그대로 지나갔습니다.) 또 2017년 10월에는 중국에 소행성이 떨어졌습니다. 사상자 발생이나
+			지역에 큰 피해는 없었지만, 주민들은 하늘이 환해지면서 강렬한 진동을 느꼈다고 합니다.</li>
+		<li>2019년 8월에도 지름이 570m인 소행성이 지구를 스쳐 지나갔습니다. 소행성 중 크기가 큰 편에 속하기
+			때문에 지구와 충돌했다면 한 국가 전체를 멸망시킬 정도로 파괴력이 컸을 것으로 보고 있습니다. 이 외에도 매년 무시무시한
+			파괴력을 자랑하는 소행성들이 우리도 모르는 사이 지구를 스쳐지나갑니다.</li>
+		<li>전문가들은 모르는 게 약이라고 주장하기도 하는데요. 소행성이 충돌할 것이라는 생각에 사로잡히면 공포감을 떨칠
+			수 없기 때문입니다.</li>
+		<li>하지만 생각해보면 지구에서 바다의 비율은 71%고 육지는 29%인데, 소행성이 떨어지더라도 육지에 떨어질
+			확률은 상대적으로 낮다는 것입니다. 그러니 안심하시길 바랍니다.</li>
+		<li><img src="../img/light.jfif"/></li>
+	</ul>
+</body>
+</html>

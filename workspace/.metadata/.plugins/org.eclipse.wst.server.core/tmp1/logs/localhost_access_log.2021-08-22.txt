@@ -1,0 +1,7 @@
+127.0.0.1 - - [22/Aug/2021:23:44:50 +0900] "GET / HTTP/1.1" 404 807
+0:0:0:0:0:0:0:1 - - [22/Aug/2021:23:44:50 +0900] "GET /webApp2/javascript/js18_noticeDiv.html HTTP/1.1" 200 2465
+0:0:0:0:0:0:0:1 - - [22/Aug/2021:23:44:51 +0900] "GET /webApp2/img/light.jfif HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [22/Aug/2021:23:44:51 +0900] "GET /webApp2/img/gluten.jpg HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [22/Aug/2021:23:44:51 +0900] "GET /favicon.ico HTTP/1.1" 404 818
+0:0:0:0:0:0:0:1 - - [22/Aug/2021:23:55:57 +0900] "GET /webApp2/javascript/scrollbanner.html HTTP/1.1" 200 1328
+0:0:0:0:0:0:0:1 - - [22/Aug/2021:23:55:57 +0900] "GET /favicon.ico HTTP/1.1" 404 818

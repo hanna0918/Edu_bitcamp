@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item key="selection" value=""/>
+		<item key="wrap" value="true"/>
+		<item key="casesensitive" value="false"/>
+		<item key="wholeword" value="false"/>
+		<item key="incremental" value="false"/>
+		<item key="isRegEx" value="false"/>
+		<list key="findhistory">
+			<item value="height: 100px;"/>
+			<item value="height:100px;"/>
+			<item value="matchingUploadTitle"/>
+			<item value="border"/>
+			<item value="#title"/>
+			<item value="id=&apos;title&apos;"/>
+			<item value="title"/>
+			<item value=".content"/>
+			<item value="class=&apos;content&apos;"/>
+			<item value="class=&apos;list&apos;"/>
+			<item value="class=&apos;list"/>
+			<item value=".list"/>
+			<item value="msgDelBtn"/>
+			<item value="page"/>
+			<item value="ell"/>
+		</list>
+		<list key="replacehistory">
+			<item value="#quesTitle"/>
+			<item value="id=&apos;quesTitle&apos;"/>
+			<item value=".quesContent"/>
+			<item value="class=&apos;quesContent&apos;"/>
+			<item value="class=&apos;questionList&apos;"/>
+			<item value="class=&apos;&apos;"/>
+			<item value="&lt;li class=&apos;selectLi&apos;&gt;10&lt;/li&gt;"/>
+			<item value="&lt;li class=&apos;userid&apos;&gt;&lt;a href=&apos;#&apos;&gt;위기탈출넘버원&lt;/a&gt;&lt;br/&gt;&lt;span&gt;(numberone)&lt;/span&gt;&lt;/li&gt;"/>
+			<item value=""/>
+			<item value="&lt;li class=&apos;selectLi&apos;&gt;인증&lt;/li&gt;"/>
+			<item value="border-radius:5px"/>
+			<item value="&apos;mypage.css?a&apos;"/>
+			<item value="#facdd1"/>
+			<item value="name=&apos;ratingBtn&apos;"/>
+			<item value="＞"/>
+		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item key="DIALOG_X_ORIGIN" value="1115"/>
+		<item key="DIALOG_Y_ORIGIN" value="603"/>
+		<item key="DIALOG_WIDTH" value="393"/>
+		<item key="DIALOG_HEIGHT" value="523"/>
+		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-18|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>
+	</section>
+	<section name="org.eclipse.wst.html.ui.internal.preferences.ui.HTMLTemplatePreferencePage$HTMLEditTemplateDialog_dialogBounds">
+		<item key="DIALOG_X_ORIGIN" value="-602"/>
+		<item key="DIALOG_Y_ORIGIN" value="78"/>
+		<item key="DIALOG_WIDTH" value="2273"/>
+		<item key="DIALOG_HEIGHT" value="914"/>
+		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-18|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>
+	</section>
+	<section name="org.eclipse.jst.jsp.ui.internal.preferences.ui.JSPTemplatePreferencePage$JSPEditTemplateDialog_dialogBounds">
+		<item key="DIALOG_X_ORIGIN" value="401"/>
+		<item key="DIALOG_Y_ORIGIN" value="139"/>
+		<item key="DIALOG_WIDTH" value="1704"/>
+		<item key="DIALOG_HEIGHT" value="1217"/>
+		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-18|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>
+	</section>
+</section>

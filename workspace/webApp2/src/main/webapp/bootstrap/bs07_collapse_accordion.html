@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<meta name='viewport' content='width=device-width, initial-scale=1'/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+
+</head>
+<body>
+	<h1>Collapse 예</h1>
+	<!--  버튼을 클릭하면 이미지가 접현다, 펼쳤다가 하는 기능 -->
+	<button class='btn btn-success' data-target='#view1' data-toggle='collapse'>클릭하세요</button>
+	<div id='view1' class='collapse show'>
+		<img src='../img/hongkong.jfif'/>
+	</div>
+	
+	<hr/>
+	<button class='btn btn-secondary' data-target='#view2' data-toggle='collapse'>클릭하면 내용 나오지롱</button>
+	<div id='view2' class='collapse'>
+	Queensland eases COVID-19 restrictions
+	
+	Locals are seen out and about in Queen St Mall, Brisbane, Queensland, Australia, 30 August 2021. Queensland has eased its COVID-19 restrictions, 
+	with caps on home gatherings increased and the number of people allowed at weddings and funerals boosted. EPA/RUSSELL FREEMAN AUSTRALIA AND NEW 
+	ZEALAND OUT	
+	</div>
+	
+	<h1>Accordion</h1>
+	<div id='accordion'>
+		<div class='card'>
+			<div class='card-header' data-target='#a1' data-toggle='collapse'>아코디언 적용예제1111</div>
+			<div class='collapse' id='a1'>
+			Queensland eases COVID-19 restrictions
+			
+			Locals are seen out and about in Queen St Mall, Brisbane, Queensland, Australia, 30 August 2021. Queensland has eased its COVID-19 restrictions, 
+			with caps on home gatherings increased and the number of people allowed at weddings and funerals boosted. EPA/RUSSELL FREEMAN AUSTRALIA AND NEW 
+			ZEALAND OUT	
+			</div>
+		</div>
+		<div class='card'>
+			<div  class='card-header' data-target='#a2' data-toggle='collapse'>아코디언 적용예제2222</div>
+			<div class='collapse' id='a2' >
+				<img alt="" src="../img/gluten.jpg">	
+			</div>
+		</div>
+		<div class='card'>
+			<div  class='card-header' data-target='#a3' data-toggle='collapse'>아코디언 적용예제3333</div>
+			<div class='collapse' id='a3'>
+			Queensland eases COVID-19 restrictions
+			
+			Locals are seen out and about in Queen St Mall, Brisbane, Queensland, Australia, 30 August 2021. Queensland has eased its COVID-19 restrictions, 
+			with caps on home gatherings increased and the number of people allowed at weddings and funerals boosted. EPA/RUSSELL FREEMAN AUSTRALIA AND NEW 
+			ZEALAND OUT	
+			</div>
+		</div>
+	</div>
+	<p>
+	<p>
+	<p>
+</body>
+</html>

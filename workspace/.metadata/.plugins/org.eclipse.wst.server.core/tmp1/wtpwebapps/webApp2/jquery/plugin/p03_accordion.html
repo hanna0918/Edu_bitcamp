@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<!--
+	https://github.com/alaingoga 
+	
+	1. accordionImageMenu.css
+	2. jquery
+	3. jquery ui
+	4. accordionImageMenu.js
+	
+ -->
+ <link rel="stylesheet" href="accordionImageMenu.css" type="text/css"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src= "../jquery-ui.js"></script>
+<script src="jquery.accordionImageMenu.js"></script>
+<script>
+	$(()=>{
+		$('#accordionImg').AccordionImageMenu({
+			position:'horizontal',		//'horizontal', 'vertical'
+			openItem:3,					//처음 실행될때 확장되어보이는 이미지의 index를 표시한다.
+			openDim:500,				//확장된 목록의 폭 설정
+			closeDim:100,				//닫힌 목록의 폭 설정
+			
+			//width:vertical, height:horizotal
+			height:600,
+			//width:600,
+			duration:3000,				//화면전환속도
+			//easing
+			effet:'easeOutBounce',
+			border:1,
+			color:'lightblue'			//남는 공간의 배경색
+			
+		});
+	});
+</script>
+</head>
+<body>
+	<ul id="accordionImg">
+		<li><a href="https://www.naver.com"><img src="../../img/light.jfif" title='알전구 반짝반짝'/></a></li>
+		<li><a href="https://www.naver.com"><img src="../../img/fox.jfif" title='강영현=여우'/></a></li>
+		<li><a href="https://www.naver.com"><img src="../../img/hongkong.jfif" title='홍콩여행 갈거야!!!!!!'/></a></li>
+		<li><a href="https://www.naver.com"><img src="../../img/milkyway.jfif" title='쏟아지는 밀키웨이~~~~~'/></a></li>
+		<li><a href="https://www.naver.com"><img src="../../img/moutain.jfif" title='스위스 가고싶군'/></a></li>
+		<li><a href="https://www.naver.com"><img src="../../img/polar.jfif" title='빙하를 지켜라!!'/></a></l>
+		<li><a href="https://www.naver.com"><img src="../../img/icecream.jpg" title='소프트아이스끄림'/></a></li>
+		<li><a href="https://www.naver.com"><img src="../../img/catgarden.JPG" title='캣가든 왕자님인가 공주님인가'/></a></li>
+	</ul>
+</body>
+</html>

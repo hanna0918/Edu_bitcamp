@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	div{font-size:2em; width:300px; height:80px; margin:20px; border:1px solid gray;
+		line-height:80px; text-align:center;
+	}
+	img{margin:20px; width:50%;}
+	
+	/* 글자에 그림자
+	
+	*/
+	div:first-of-type{
+		/*			오른쪽  아래쪽	투명		색상		*/
+		text-shadow:10px  10px	5px	gray;	}
+	div:last-of-type, img{
+		box-shadow: 5px 5px 5px green;}
+		
+	/* 그라데이션 적용 
+		https://www.colorzilla.com/gradient-editor/
+	*/
+	div:nth-child(2){
+		font-size:2em; width:95%; height:800px;
+		/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#f7fbfc+0,d9edf2+40,add9e4+100;Blue+3D+%231 */
+		background: rgb(247,251,252); /* Old browsers */
+		background: -moz-linear-gradient(top,  rgba(247,251,252,1) 0%, rgba(217,237,242,1) 40%, rgba(173,217,228,1) 100%); /* FF3.6-15 */
+		background: -webkit-linear-gradient(top,  rgba(247,251,252,1) 0%,rgba(217,237,242,1) 40%,rgba(173,217,228,1) 100%); /* Chrome10-25,Safari5.1-6 */
+		background: linear-gradient(to bottom,  rgba(247,251,252,1) 0%,rgba(217,237,242,1) 40%,rgba(173,217,228,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7fbfc', endColorstr='#add9e4',GradientType=0 ); /* IE6-9 */
+				
+	}
+</style>
+</head>
+<body>
+<div id="txt1">
+	테스트 그림자
+</div>
+<div>
+그린카는 2021년 8월 현재, 전 차량의 약 85%가 제조사의 순정 ADAS가 적용된 차량을 도입했으며 이를 고객들에게 제공하고 있다. 현재 그린카에 장착된 주요 ADAS 옵션은 긴급제동보조시스템, 측후방 추돌 경고 시스템, 스마트 크루즈 컨트롤, 차선이탈 경보 시스템 등이 있다. 또한, 그린카는 고객들의 사고 방지와 이용 편의성 극대화를 위해 오는 2022년 말까지 전 차량을 제조사의 순정 ADAS를 탑재한 상위 트림 차량으로 변경한다. 또 지난 6월 진행한 아이오닉5 전기차 도입에 이어 올해 말까지 전기차 100여 대를 추가 도입하며 친환경 차량 비율을 점차 확대해 나갈 계획이다. 그린카 김경봉 대표는 “이번 ADAS 전 차량 도입은 그린카 고객들이 사고로부터 더 멀어지고 주행 기능 향상을 통하여 운전 편의성을 확대하기 위해 계획했다.”고 말했다. 이어 “모빌리티 관련 업종에 대해 기업의 사회적 가치 창출과 책임이 커지고 있는 만큼 2030년까지 전기차 전환을 완료할 수 있도록 하겠다.”고 했다.
+</div>
+<div id="txt2">
+	박스 그림자
+</div>
+<img src="../img/light.jfif" />
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>로그인</title>
+<style>
+	body{
+		background-color:#ddd;
+		margin:0; 
+	}
+	ul, li{
+		margin:0; padding:0; list-style-type:none;
+	}
+	
+	a:link, a:visited, a:hover{
+		text-decoration:none; color:gray;
+	}
+	
+	li{
+		padding:5px 152px 5px 153px ; 
+		text-align:center;
+	}
+	#container{
+		width:700px;
+		background-color:white;
+		margin:0 auto;
+	}
+	#back{
+		width:20px;
+		height:20px;
+	}
+	#banner{
+		width:100%;
+	}
+	/* 로고 */
+	.logo{
+		width:150px;
+		margin:130px 0 30px 0;
+	}
+	
+	/* 다른 로그인 */
+	#container li:nth-of-type(2){
+		text-align:right;
+	}
+	
+	form input:not([type=checkbox]){
+		width:100%; height:50px; font-size:1.5em; margin-bottom:10px; padding:0px;
+	}
+	
+	input[type=submit]{
+		background-color:rgb(76, 135, 238);
+		color:white;
+		width:410px;
+	}
+	form>div{overflow:auto;}
+	form>div>div:first-of-type{float:left;}
+	form>div>div:last-of-type{float:right;}
+	
+	
+	#container>ul>li:last-of-type{
+		border-top:1px solid #ddd;
+		padding:20px 0 50px;
+	}
+	
+</style>
+<script>
+	function logCheck(){
+		//id, pwd 유무 확인
+		var id = document.getElementById("userid").value;
+		if(id==""){
+			alert("아이디를 입력하라.");
+			return false;
+		}
+		if(document.getElementById("userpwd").value==""){
+			alert("비밀번호를 입력하라.");
+			return false;
+		}
+		
+		//아이디와 비밀번호가 입력된 경우
+		return true;
+	}
+</script>
+</head>
+<body>
+	<div id="container">
+		<ul>
+			<li><a href="https://www.daum.net"><img src="daum.png" class="logo"/></a></li>
+			<li><a><img src="uturn.png" id="back"/>다른 방법으로 로그인</a></li>
+			<li>
+				<form method="post" action="login.jsp" onsubmit="return logCheck()">
+					<input type="text" name="userid" id="userid" placeholder="아이디"/>		<!-- name:jsp에서 쓰는 변수 id:javaScript에서 쓰는 변수 -->	
+					<input type="password" name="userpwd" id="userpwd" placeholder="비밀번호"/>
+					<!-- 		submit, button, image
+								button태그 : submit의 기능을 가지고있다.
+					 -->
+					<input type="submit" value="로그인"/>
+					<div>
+						<div><input type="checkbox" name="save"/> <a href="#">로그인 상태유지</a></div>
+						<div><a href="#">IP보안 ON</a></div> 
+					</div> 
+				</form>
+			</li>
+			<li>
+				<a href="">아이디 찾기</a> |
+				<a href="">비밀번호 찾기</a>
+			</li>
+			<li>
+				<img src="adver.JPG" id="banner"/>
+			</li>
+			<li>
+				<a href="">&copy;Kakao Corp.</a> | <a href="">고객센터</a>
+			</li>
+		</ul>
+	</div>
+</body>
+</html>
+

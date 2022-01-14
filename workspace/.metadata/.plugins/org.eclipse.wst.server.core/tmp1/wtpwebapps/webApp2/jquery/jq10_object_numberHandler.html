@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+	$(function(){
+		$('div:eq(0)').css('border', '5px solid red');
+		$('div:gt(0)').css('width', '300px').css('height', '350px')
+					  .css('background-color', 'lightblue').css('border', '5px solid gray');//0보다 크다
+		$('div:nth-child(3)').css('position', 'absolute').css('right', '10px').css('bottom', '20px')
+							.css('background-color','pink').css('margin', '50px').css('padding', '30px');
+		
+		// 수치 조작 메소드
+		// html(), tx=ext()
+		$('div').eq(2).append("<h2>Append로 추가된 내용</h2>");
+		
+		// 객체의 폭과 높이
+		// width(), height() : margin과 padding, border를 제외한 폭과 높이를 구한다.
+		var w = $('div:eq(1)').width();
+		var h = $('div:eq(1)').height();
+		
+		$('div').eq(2).append('<h3>폭:'+w+', 높이:'+h+'<br/>');
+		
+		var w2 = $('div').eq(2).width();
+		var h2 = $('div').eq(2).height();
+		$('div').eq(2).append('<h3>폭:'+w2+', 높이:'+h2+'<br/>');
+		
+		
+		// innerWidth(), innerHeight() : padding을 포함하여 폭과 높이를 구한다.
+		var w3 = $('div').eq(2).innerWidth();
+		var h3 = $('div').eq(2).innerHeight();
+		$('div').eq(2).append('<h3>innerWidth:'+w3+', innerHeight:'+h3+'</h3>');
+		
+		// outerWidth(), outerHeight() : border, padding을 포함하여 폭과 높이를 구한다.
+		var w4 = $('div:last').outerWidth();
+		var h4 = $('div:last').outerHeight();
+		$('div:last').append('<h3>outerWidth:'+w4+', outerHeight:'+h4+'</h3>');
+		
+		// appendTo() : -------------------------------------------
+		/*
+			$(선택자).append(추가할 내용);
+			$(추가할 내용).appendTo(선택자);-------무조건 html태그가 있어야함(<h>)
+		*/
+		
+		// position() : left, top의 좌표를 구한다. (margin을 포함하여 구한다.)
+		
+		$('<h3>left ---> '+$('div:last').position().left +'<br/>top ---> '+$('div:last').position().top +'</h3>').appendTo('div:last');
+		
+		// offset() : left, top좌표를 구한다.(margin, border를 제외한 좌표)
+		$('<h3>left ---> '+$('div:last').offset().left +'<br/>top ---> '+$('div:last').offset().top +'</h3>').appendTo('div:last');
+		
+		// 스크롤바의 위치구하기
+		// scrollTop() : 상하, scrollLeft()
+		$('div:first').append('<br/>scrollTop -->'+$(window).scrollTop());
+		$('div:first').append('<br/>scrollLeft -->'+$(window).scrollLeft());
+		
+	});
+</script>
+</head>
+<body>
+	<div>수치 조작 메소드</div>
+	<div><h2>12345678</h2></div>
+	<div>ABCD</div>
+</body>
+</html>

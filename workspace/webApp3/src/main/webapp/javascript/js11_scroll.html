@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	function scrollTest(){
+		//스크롤바 이동하기
+		//절대 위치로 이동
+		//				x:좌우,	y:상하
+		//window.scrollTo(100, 200);
+	
+		//상대 위치로 이동
+		window.scrollBy(0,20);
+		
+		var top = window.scrollY;
+		var left = window.scrollX;
+		
+		document.getElementById("r").innerHTML= "top = " + top + "<br/>left = " + left;
+	}
+</script>
+</head>
+<body>
+	<img src="../img/gluten.jpg"/><button onclick="scrollTest()">클릭하라</button><br/>
+	<div id="r"></div>
+	<img src="../img/gluten.jpg"/><br/>
+	<img src="../img/gluten.jpg"/><br/>
+	<img src="../img/gluten.jpg"/><br/>
+	<img src="../img/gluten.jpg"/><br/>
+</body>
+</html>

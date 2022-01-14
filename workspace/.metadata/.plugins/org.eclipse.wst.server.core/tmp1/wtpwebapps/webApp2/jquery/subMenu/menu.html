@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<style>
+	ul,li{
+		margin:0; 
+		padding:0; 
+		list-style-type:none;
+	}
+	.container{
+		width:1000px;
+		margin:0 auto;
+		padding-top: 20px;
+	}
+	#title{
+		height:100px;
+		font-size:3em;
+		font-weight:bold;
+		text-align: center;
+		padding:60px;
+		border-bottom:3px solid gray;
+	}
+	#main>li{
+		width:200px;
+		height:50px;
+		text-align:center;
+		float:left;
+		font-size:1.2em;
+		line-height:50px;
+		border-bottom:2px solid gray;
+		position:relative;
+		
+	}
+	.sub{
+		width:200px;
+		background-color:white;
+		text-align:center;
+		border:0.9px solid #ddd;
+		position:absolute;
+		display:none;
+	}
+	.sub>li{
+		font-size:0.9em;
+		font-style:'돋움';		
+	}
+	
+	img{
+		width:100%;
+	}
+	
+	a{
+		text-decoration:none; color:black;
+	}
+	
+	
+</style>
+<script>
+	$(()=>{
+		$('#main>li').on({
+			mouseenter:function(){
+				$(this).children('ul').css('display', 'block');
+			}, mouseleave:function(){
+				$(this).children('ul').css('display', 'none');
+			}
+		});
+		
+	});
+</script>
+</head>
+<body>
+	<div class='container'>
+		<div id='title' onclick="location.href=''">GIRLSDAILY</div>
+		<div id='menu'>
+			<ul id='main'>
+				<li ><a href="">OUTER</a>
+					<ul class='sub'>
+						<li><a href="">가디건</a></li>
+						<li><a href="">자켓 & 점퍼</a></li>
+						<li><a href="">베스트</a></li>
+						<li><a href="">코트</a></li>
+						<li><a href="">세일</a></li>
+					</ul>
+				</li>
+				<li><a href="">TOP</a>
+					<ul class='sub'>
+						<li><a href="">Tee</a></li>
+						<li><a href="">Cami</a></li>
+						<li><a href="">Knit</a></li>
+						<li><a href="">Shirt & Blouse</a></li>
+					</ul>
+				</li>
+				<li><a href="">DRESS</a>
+					<ul class='sub'>
+						<li><a href="">All</a></li>
+						<li><a href="">바캉스룩</a></li>
+						<li><a href="">Set</a></li>
+					</ul>
+				</li>
+				<li><a href="">BOTTOM</a>
+					<ul class='sub'>
+						<li><a href="">레깅스</a></li>
+						<li><a href="">힐링투엘브</a></li>
+						<li><a href="">히든벤딩시리즈</a></li>
+						<li><a href="">스커트</a></li>
+						<li><a href="">팬츠</a></li>
+					</ul>
+				</li>
+				<li><a href="">SUMMER</a>
+					<ul class='sub'>
+						<li><a href="">HOLI스윕웨어</a></li>
+						<li><a href="">at 22℃</a></li>
+						<li><a href="">바캉스룩</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<img src="icecream.jpg"/>
+	</div>
+</body>
+</html>

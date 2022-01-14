@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	
+
+</style>
+</head>
+<body>
+	
+	<div id="movie">
+		<pre>
+		Q 헐리우드 영화에서 러시안
+		  인으로 주로 악당으로...
+		A 냉전시대의 산물입니다. 러
+		  시아는 미국의 오랜 숙명의 
+		  라이벌이기도 하구요...
+		  </pre>
+	</div>
+	<div id="dokdo"></div>
+	<div id="plum"></div>
+	<div id="diet"></div>
+	<div></div>
+	<div></div>
+	<div></div>
+		
+	<img src="tab2_1.png" id="topic"/>
+</body>
+</html>

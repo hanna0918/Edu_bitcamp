@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	#d1, #d2, #d3, #d4{width:200px; height:200px;}
+	#d1{background : pink;}
+	#d2{background : lightblue;}
+	#d3{background : lightgreen;}
+	#d4{background : cyan;}
+	/* position : 좌표지정 가능함 
+
+			속성값
+			static : position생략시
+			relative : 좌표의 기준이 현재위치, 자신의 공간을 차지하고 있다.
+			absolute : 좌표의 기준이 body
+			
+			left, right, top, bottom : 좌표를 지정하는 속성
+			
+			z-index : 겹치기 순서 값이 클수록 위로 표시된다.
+	
+	*/
+	
+	#d1{left:100px;}
+	#d2{position:relative; top:100px; left:100px; z-index:100;}
+	#d3{position:absolute; left:200px; top:200px;}
+	
+	#i1{position:absolute; left:300px; top:300px;}
+	#i2{position:absolute; left:50px; top:50px;}
+</style>
+</head>
+<body>
+<div id="d1"></div>
+<div id="d2">
+	<img src="../img/000028.JPG" width=100px; id="i2"/>
+</div>
+<div id="d3"></div>
+<div id="d4">
+	<img src="../img/000008.JPG" width=100px;  id="i1"/>
+</div>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<style>
+	img{
+		width:100px; 
+		height:80px;
+	}
+	ul, li{
+		margin:5px; 
+		padding:0; 
+		border:3px solid gray; 
+		float:left; 
+		list-style-type:none;
+	}	
+</style>
+
+<script>
+	$(()=>{
+		// before() : 선택자 이전에 객체 추가
+		$('#img').before('<li><img src="../img/gluten.jpg"/></li>');
+		
+		// after() : 선택자 이후에 객체 추가
+		$('#img').after('<li><img src="../img/light.jfif"/></li>');
+		
+		// insertBefore() : 선택자 이전에 객체 추가 $(추가할 내용).insertBefore(선택자)
+		$('<li><img src="../img/jeju_map.jpg"/></li>').insertBefore('#img');
+		
+		// insertAfter() : 선택자 다음에 객체 추가 $(추가할내용).insertAfter(선택자);
+		$('<li id="copy"><img src="../img/wine1.jpg"/></li>').insertAfter('#img');
+		
+		// append()		태그X
+		// appendTo()	무조건 태그가 필요함
+		
+		// prepend() : 선택자의 내부 내용중에 제일 앞에 추가
+		$('ul').prepend('<li>Prepend</li>');
+		
+		// prependTo()
+		$('<li><img src="../img/wine2.jpg"/></li>').prependTo('ul');
+		
+		// clone() : 선택자와 후손 전체를 복제한다. 한번만 사용가능
+		var copyLi = $('#copy').clone();
+		// 아이디의 값을 변경
+		copyLi.attr('id', 'copy2');
+		$('ul').append(copyLi);
+		
+		// empty() : 선택자의 내용을 지운다.
+		$('#copy').empty();
+		
+		// remove() : 선택자를 지운다.
+		$('li:first').remove();
+		
+		// replaceAll() : 선택자를 다른 객체로 치환한다.
+		$('<h3>ReplaceAll</h3>').replaceAll('#copy2');
+		
+		// replaceWith()
+		$('#img').replaceWith('<h3>ReplaceWith</h3>');
+		
+		
+	});
+</script>
+</head>
+<body>
+	<ul>
+		<li id='img'><img src="../img/cookie.jpg"/></li>
+	</ul>
+</body>
+</html>

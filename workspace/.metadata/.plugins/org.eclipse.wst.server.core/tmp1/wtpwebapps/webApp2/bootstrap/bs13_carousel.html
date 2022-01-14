@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<meta name='viewport' content='width=device-width, initial-scale=1'/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+<style>
+	.carousel-inner img{
+		width:100%;
+		height:500px;
+	}
+	.carousel-caption{
+		color:gray;
+	}
+</style>
+</head>
+<body>
+	<div class='container'>
+		<div id='slideImg' class='carousel slide' data-ride='carousel' data-interval='3000'><!-- carousel시작 -->
+			<!-- 아이콘 -->
+			<ul class='carousel-indicators'>
+				<li data-target='#slideImg' data-slide-to='0' class='active'></li>
+				<li data-target='#slideImg' data-slide-to='1'></li>
+				<li data-target='#slideImg' data-slide-to='2'></li>
+			</ul>
+			
+			<!-- 슬라이딩 이미지 목록 -->
+			<div class='carousel-inner'>
+				<!-- ===== 1 ====== -->
+				<div class='carousel-item active'>
+					<img alt="" src="../img/polar.jfif">
+					<!-- 이미지 위의 설명서 -->
+					<div class='carousel-caption'>
+						<h2>polar bear</h2>
+						<p>북극곰. 백곰이라고도 한다.</p>
+					</div>
+				</div>
+				
+				<!-- ===== 2 ====== -->
+				<div class='carousel-item'>
+					<img alt="" src="../img/fox.jfif">
+					<!-- 이미지 위의 설명서 -->
+					<div class='carousel-caption'>
+						<h2>fox</h2>
+						<p>북극여우. 개과의 포유류.</p>
+					</div>
+				</div>
+				
+				<!-- ===== 3 ====== -->
+				<div class='carousel-item'>
+					<img alt="" src="../img/milkyway.jfif">
+					<!-- 이미지 위의 설명서 -->
+					<div class='carousel-caption'>
+						<h2>milky way</h2>
+						<p>은하수. 아주 많은 미광성의 빛이 집적된 것.</p>
+					</div>
+				</div>
+			</div>
+			<!-- 좌우 이동 버튼 -->
+			<a href='#slideImg' class='carousel-control-prev' data-slide='prev'><span class='carousel-control-prev-icon'></span></a>
+			<a href='#slideImg' class='carousel-control-next' data-slide='next'><span class='carousel-control-next-icon'></span></a>
+		</div>
+	</div>
+</body>
+</html>

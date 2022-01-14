@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	function eventOpen(){
+		
+		//쿠키정보 얻어오기
+		var cookie = document.cookie;
+		if(cookie.indexOf('event=test')==1){
+			//			파일이름			창이름, 옵션
+			w = window.open("js16_event.html","w","width=350, height=250");
+		}
+	}
+</script>
+
+</head>
+<body onload="eventOpen()">
+	<h1>cookie를 이용한 팝업 만들기</h1>
+	<img src="../img/gluten.jpg"/>
+</body>
+</html>

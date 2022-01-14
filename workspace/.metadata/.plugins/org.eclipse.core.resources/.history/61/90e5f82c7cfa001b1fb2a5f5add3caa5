@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	
+
+</style>
+</head>
+<body>
+	
+	<div id="movie">
+		
+	</div>
+	<div id="dokdo"></div>
+	<div id="plum"></div>
+	<div id="diet"></div>
+	<div></div>
+	<div></div>
+	<div></div>
+		
+	<img src="tab2_1.png" id="topic"/>
+</body>
+</html>

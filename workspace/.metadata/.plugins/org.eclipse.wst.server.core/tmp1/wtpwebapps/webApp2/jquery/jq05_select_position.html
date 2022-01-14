@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='UTF-8'>
+<title>Insert title here</title>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js' integrity='sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==' crossorigin='anonymous' referrerpolicy='no-referrer'></script>
+<script>
+	$(function(){
+		//위치선택자
+		$('#menu>li:first').css('color', 'red');//첫번째에있는 객체 선택
+		$('#menu>li:last').css('color', 'blue');//마지막에 있는 객체
+		$('#menu>li:even').css('background-color','pink');//index 기준 짝수번째 객체 선택
+		$('#menu>li:odd').css('background-color','lightblue');//index기준 홀수번째 객체선택
+		
+		$('#menu>li:nth-last-of-type(3)').css('font-size','2em');//뒤에서 세번째 객체를 선택
+		$('#menu>li:nth-child(3n)').css('color', 'green');//3의 배수의 위치객체 선택(1,2,3,4,5,6,7...->index기준 아님)
+		
+		//외동인 li객체를 선택
+		$('li:only-child').css('background-color', '#ddd').css('border','1px solid red');//li의 부모중 자식이 1개인 li객체를 선택한다.		
+		
+		$('li').parent().css('border', '1px solid orange');//li의 부모객체
+		
+		//index를 이용한 선택자
+		$('#menu>li').slice(3).css('font-size','3em').css('font-weight','bold');//	index가 3이상인 객체를 선택한다.
+		$('#menu li').eq(2).css('font-size', '4em');	// eq = equal	index가 2인 객체
+		
+		//			less then < 
+		$('#menu li:lt(4)').css('background-color', 'yellow');//index가 4이하인 객체를 선택
+		//			great then >
+		$('#menu li:gt(4)').css('background-color', 'cyan');// ??????????/
+		
+		
+	});
+
+
+</script>
+
+</head>
+<body>
+	<ul id='menu'>
+		<li>html/css</li>
+		<li>자바스크립트</li>
+		<li>jquery</li>
+		<li>Ajax</li>
+		<li>JSP : Java Server Page</li>
+		<li>Spring</li>
+		<li>MyBatis</li>
+	</ul>
+	<ul>
+		<li>위치 선택자</li>
+		
+	</ul>
+</body>
+</html>

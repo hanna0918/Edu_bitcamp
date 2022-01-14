@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	var a = "5";
+	var b = "6a";
+	var c = 5;
+	
+	document.write(isNaN(a)+", ");		//false(숫자)
+	document.write(isNaN(b)+", ");		//true(문자)
+	document.write(isNaN(c)+"<br/>");	//false(숫자)
+
+	document.write(b + c + "<hr/>");
+	function calcul(){
+		var r = "";
+		var firObj = document.getElementById("fir"); 
+		var secObj = document.getElementById("sec");
+		var fir = firObj.value;
+		var sec = secObj.value;
+		
+		if(!isNaN(fir) && !isNaN(sec)){
+			var firInt = parseInt(fir);
+			var secInt = parseInt(sec);
+			
+			var	add = firInt+secInt;
+			var	minus = firInt-secInt;
+			var	mul = firInt*secInt;
+			var	div = firInt/secInt;
+			
+			var r = fir + "+" + sec +"=" + add+"<br/>";
+				r += fir + "-" + sec +"=" + minus+"<br/>";
+				r += fir + "*" + sec +"=" + mul+"<br/>";
+				r += fir + "/" + sec +"=" + div+"<br/>";
+	
+				document.getElementById("result").innerHTML = r;
+				
+				//초기화
+				firObj.value = "";
+				secObj.value = "";
+		}else{
+			document.getElementById("result").innerHTML = "값을 잘못입력하였다.";
+		}
+	}
+</script>
+</head>
+<body>
+	<div>
+		첫번째 수 : <input type="text" name="fir" id="fir" value=""/><br/>
+		두번째 수 : <input type="text" name="sec" id="sec" value=""/><br/>
+	</div>
+	<input type="button" value="결과보기" onclick="calcul()"/>
+	<div id="result">결과출력</div>
+</body>
+</html>

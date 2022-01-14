@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<ul>
+	<li id="first">첫번째</li>
+	<li>두번째</li>
+</ul>
+<img src="../img/gluten.jpg" id="i1"/>
+
+<script>
+	//자바스크립트에서 스타일시트 적용하기
+	
+	// background,	background-color,	background-image, ...
+	// font-size --> fontSize
+	
+	var i = document.getElementById("i1")
+	
+	document.getElementById("first").style.backgroundColor="pink";
+	i.style.border="3px solid red";
+	
+	// html태그의 속성을 제어한다.
+	i.src = "../img/light.jfif";
+	i.title = "풍선도움말";
+	
+	// i1태그내의 내용 변경하기
+	document.getElementById("first").innerHTML = "<img src='../img/gluten.jpg'/>";
+	
+</script>
+</body>
+</html>

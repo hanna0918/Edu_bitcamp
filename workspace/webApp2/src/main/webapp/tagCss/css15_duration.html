@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	div{width:500px; height:500px; border:1px solid gray; overflow:hidden;
+	
+		/* 지정한 시간을 기준으로 변환한다. (초단위)*/
+		transition-duration:2s;
+		
+		/* 투명도 */
+		opacity:1;
+	}
+	input:checked+div{
+		height:0px;
+		opacity:0;
+	}
+	
+</style>
+</head>
+<body>
+<input type="checkbox"/> 클릭하세요.
+<div>
+	<img src="../img/light.jfif"/ >
+	<img src="../img/light.jfif"/>
+</div>
+</body>
+</html>

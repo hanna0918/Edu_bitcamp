@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	#result{background-color:lightblue;}
+</style>
+<script>
+	// 연산자 : +, -, *, /, %, ||, &&, !, >, <, >=, <=, +=, -=, *=, ...,++ ,-- ,....
+	// if, if~else, while, for, do~while, break, continue, switch
+	
+	//alert("페이지가 로딩됨~~~~");
+	//구구단을 구하는 함수
+	function gugudan(dan){
+		var r="";
+		for(i=2; i<=9; i++){
+			r += dan + "*" + i +"=" + (dan*i)+"<br/>";
+		}
+		console.log(r);
+		document.getElementById("result").innerHTML = r;
+	}
+	
+	//mouseover시 호출
+	/*function imageChange(){
+		document.getElementById("img").src="../img/cookie.jpg";
+	}
+	
+	//mouseout시 호출
+	function imageChange2(){
+		document.getElementById("img").src="../img/gluten.jpg";
+	}*/
+	function imageChange(n){
+		document.getElementById("img").src = "../img/"+n+".jpg";
+	}
+	/*function imageChange(obj, n){
+		obj.src = "../img/"+n+".jpg";
+	}*/
+</script>
+</head>
+<body>
+	<input type="button" value="Click하세요!" onclick="gugudan(9); alert('구구단이 출력됨...')" />
+	<button>클릭하세요!</button>
+	<div id="result">결과가 출력될 위치</div>
+	<!-- <img src="../img/gluten.jpg" id="img" onmouseover="imageChange()" onmouseout="imageChange2()"/>  -->
+	<!-- <img src="../img/gluten.jpg" id="img" onmouseover="imageChange('cookie')" onmouseout="imageChange('gluten')"/> -->
+	<!-- <img src="../img/gluten.jpg" id="img" onmouseover="this.src='../img/cookie.jpg'" onmouseout="this.src='../img/gluten.jpg'"/> -->
+	<img src="../img/gluten.jpg" id="img" onmouseover="imageChange(this, 'cookie')" onmouseout="imageChange(this, 'gluten')"/> 
+</body>
+</html>

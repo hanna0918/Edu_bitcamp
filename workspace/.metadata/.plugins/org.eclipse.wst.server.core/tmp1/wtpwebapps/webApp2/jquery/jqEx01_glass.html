@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script>
+	$(()=>{
+		$('body').prepend('<div id="pink"></div>');
+		$('#pink').after('<div id="blue"></div>');
+		$('#blue').after('<img src="../img/title_layer.gif" id="title"/>');
+		$('#title').after('<img src="../img/glass1.gif" id="g1"/>');
+		$('#g1').after('<img src="../img/glass2.gif" id="g2"/>');
+		$('body').append('<img src="../img/glass3.gif" id="g3"/>');
+		
+		$('body').css('margin','0');
+		$('#pink').css('height', '40px').css('background-color','rgb(239, 135, 152)');
+		$('#blue').css('height', '22px').css('background-color', 'rgb(84, 174, 200)');
+		$('img').css('position', 'absolute');
+		$('#title').css('top', '0px');
+		$('#g1').css('left', '310px').css('top','60px');
+		$('#g2').css('left', '500px').css('top','80px');
+		$('#g3').css('left', '400px').css('top','100px');
+		
+		
+		
+		
+	});	
+	
+</script>
+</head>
+<body>
+</body>
+</html>

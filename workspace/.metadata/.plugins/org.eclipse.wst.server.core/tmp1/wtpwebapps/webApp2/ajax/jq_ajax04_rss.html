@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+	$(()=>{
+		function zeroSet(data){
+			if(data<10){
+				return '0'+data;
+			}else{
+				return data;
+			}
+		}
+		$('#ajaxStart').click(function(){
+			$.ajax({
+				url:'Rss_news.xml',
+				dataType:'xml',
+				success:function(result){
+					if($(result).find('item').length>0){
+						$(result).find('item').each(function(){
+							let tag = '<li><a href="'+$(this).find('link').text()+'">'+$(this).find('title').text()+'</a> (';
+							//날짜
+							let dt = $(this).find('dc').text();	//Mon, 30 Aug 2021 10:12:52 +0900
+							let realDate = new date(dt);
+							//년-월-일 시:분
+							let y = realDate.getFullYear();
+							let m = realDate.getMonth()+1;
+							let d = realDate.getDate();
+							
+							let h = realDate.getHours();
+							let mm = realDate.getMinutes();
+							
+							let dateTxt = y+'-'+ zeroSet(m)+'-'+zeroSet(d)+' '+zeroSet(h)+':'+zeroSet(mm);
+							tag += dateTxt +', '+$(this).find('author').text()+') <br/>'
+							console.log(dateTxt);
+							tag+=$(this).find('description').text()+'</li>';
+							$('#news').append(tag);
+							
+						});
+					}
+				}, error:function(){
+					console.log('News전송 실패');
+				}
+				
+			});
+		});
+	});
+</script>
+</head>
+<body>
+	<button id='ajaxStart'>ajax로 RSS파일정보 얻어오기</button>
+	<ol id='news'>
+	</ol>
+</body>
+</html>

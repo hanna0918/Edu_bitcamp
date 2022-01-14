@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<style>
+	#banner{
+		width:500px;
+		height:400px;
+		margin:0 auto;
+		border:1px solid gray;
+		position:relative;
+		overflow:hidden;
+	}
+	/*이미지목록*/
+	#bannerImg{
+		width:3000px;
+	}
+	/*설명서*/
+	#slideTxt{
+		position:absolute;
+		left:-430px;
+		top:120px;
+		width:400px;
+		height:250px;
+		color:#780641;
+		border:1px solid red;
+	}
+	
+	#slideTxt>div{
+		position:absolute;
+		left:0px;
+		top:0px;
+		width:400px;
+		height:250px;
+	}
+	img{
+		width:500px;
+		height:400px;
+	}
+	
+	/*컨트롤러*/
+	#controller{
+		position:absolute;
+		left:120px;
+		top:350px;
+	}
+	#controller>div{
+		background-image:url(point_button.png);
+		width:15px;
+		height:15px;
+		float:left;
+		margin: 0 15px;
+	}
+</style>
+<script>
+	function slideImage(i){
+		//이미지
+		$('#bannerImg').animate({marginLeft:-(i*500)+'px'}, 2000)
+		
+		//설명
+		$('#slideTxt>div').animate({marginLeft:'0px'},0);
+		$('#slideTxt>div').eq(i).delay(1000).animate({marginLeft:'500px'}, 2000);
+		
+		//컨트롤러
+		$('#controller>div').css('background-position', '0px 0px');
+		$('#controller>div').eq(i).css('background-position', '0px -30px');
+		
+	};
+
+
+	$(()=>{
+		var imgName=['aurora.jfif','fox.jfif','hongkong.jfif','milkyway.jfif','moutain.jfif','polar.jfif'];
+		var imgTag="";
+		
+		imgName.map(function(value, idx){
+			imgTag+="<img src='"+value+"'/>";
+		});
+		
+		$('#bannerImg').append(imgTag);
+		
+		//처음에 슬라이드되기 위한 난수 생성		0~5 정수(난수(큰-작은수+1))+작은수
+		var idx = parseInt(Math.random()*6);
+		$('#view').html(idx);
+		
+		slideImage(idx);
+		/////////////////////////////////////////////////////////////////////////
+		
+		$('#controller>div').click(function(){
+			slideImage($('#controller>div').index(this));
+		});
+		
+	});
+</script>
+</head>
+<body>
+	<div id='view'></div>
+	<div id='banner'>
+		<!-- 배너이미지 -->
+		<div id='bannerImg'></div>
+		<!-- 배너설명 -->
+		<div id='slideTxt'>
+			<div>
+				<h1>첫번째 이미지</h1>
+				<h2>첫번째 설명</h2>
+				<p>언제쯤 아이슬란드가서 오로라보냐 빨리 겨울이나 와라 겨울이는 장겨울이지</p>
+			</div>
+			<div>
+				<h1>두번째 이미지</h1>
+				<h2>두번째 설명</h2>
+				<p>여우 두마리 폴짝폴짝 뛰댕기지 북극여우 </p>
+			</div>
+			<div>
+				<h1>세번째 이미지</h1>
+				<h2>세번째 설명</h2>
+				<p>홍콩영화보고싶네 홍콩여행도 가고싶고 홍콩 언제가보나 ㅇㅅㅇ 홍콩은 옛날에 가봤어야하는데 하하하하하하</p>
+			</div>
+			<div>
+				<h1>네번째 이미지</h1>
+				<h2>네번째 설명</h2>
+				<p>호주에서 왜 울룰루를 안가가지고... 그래도 밀두라에서 매일 볼수있었던 은하수ㅇㅅㅇ감사한줄도 모르고</p>
+			</div>
+			<div>
+				<h1>다섯번째 이미지</h1>
+				<h2>다섯번째 설명</h2>
+				<p>저긴 어디에있는 산일까 등산은 싫지만 트레킹은 함 가보고싶군 ㅇㅅㅇ 그게그건가 하하하하하하하</p>
+			</div>
+			<div>
+				<h1>여섯번째 이미지</h1>
+				<h2>여섯번째 설명</h2>
+				<p>북극곰.. 지구와 북극곰 지키기ㅇㅅㅇ 오늘 텀블러 안가지고온거 미안... 내가 잘못했다  </p>
+			</div>
+		</div>
+		<!-- controller -->
+		<div id='controller'>
+			<div></div><div></div><div></div><div></div><div></div><div></div>
+		</div>
+		<p>
+	</div>
+</body>
+</html>

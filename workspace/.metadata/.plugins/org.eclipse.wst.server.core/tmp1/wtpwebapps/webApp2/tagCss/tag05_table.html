@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>표만들기</h1>
+<pre>
+	table태그 : 표의 시작과 끝
+	tr태그 : 표의 줄을 생성
+	td, th태그 : 줄에 칸생성
+	caption : 표의 제목을 설정
+	
+	colgroup, col
+	
+	thead태그
+	tbody태그
+	tfoot태그
+	
+	width, height, border
+	cellspacing : 선과 선 사이의 여백설정
+	cellpadding : 선과 내용사이의 여백설정
+</pre>
+<table border="10" width="100%" cellspacing="0" cellpadding="10">
+	<caption><b>오늘의 일정표</b></caption>
+	<colgroup>
+		<!-- 첫번째 컬럼과 두번째 컬럼을 같은 기능 적용 -->
+		<col span="2" bgcolor = "lightgray"/>
+		
+		<col background = "../img/000039.JPG"/>
+	</colgroup>
+	<thead>
+	<tr height="100" >
+		<th width="50">테이블태그 연습중</th>
+		<td>코스모스</td>
+		<td><img src="../img/000028.JPG" width="100"></td>
+	</tr>
+	</thead>
+	<tbody>
+	<tr>
+		<td height="200">두번째 줄</td>
+		<td>
+			<table border="1">
+				<tr>
+					<td>XXXXX</td>
+					<td>YYYYY</td>
+				</tr>	
+			</table>
+		</td>
+		<td>AAAAA</td>
+	</tr>
+	</tbody>
+	<tfoot>
+	<tr height="100">
+		<td>장미</td>
+		<td>맨드라미</td>
+		<td>해바라기</td>
+	</tr>
+	</tfoot>
+</table>
+</body>
+</html>

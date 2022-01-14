@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+	//(document).ready까지 생략 가능
+	/* 선택자 		이벤트
+	$(document).ready(function(){
+		
+	});*/
+	$(function(){
+		//선택자 : tag, id, class
+		
+		
+		//선택자
+		$("body").css("background-color", "pink");
+		$("#userid").attr("value", "goguma");	//속성값이 있을때는 attr
+		//$("#userid").attr("type", "password");	
+		$("#userid").prop("readonly", true);	//속성값이 없을때는 prop
+		
+		//img에게 폭, 높이, border적용
+		$("img").css("width","200px").css("height", "250px").css("border", "2px solid red");
+		
+		console.log($("#userid").prop("readonly"));
+		console.log($("#userid").attr("value"));
+	});
+</script>
+</head>
+<body>
+	<input type="text" name="userid" id="userid"/><br/>
+	<img src="../img/light.jfif"/>
+</body>
+</html>

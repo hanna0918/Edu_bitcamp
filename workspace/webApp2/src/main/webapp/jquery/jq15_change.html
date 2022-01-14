@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<style>
+	div{font-size:1em;}
+</style>
+<script>
+	$(function(){
+		//컬럼명
+		var rgb=['rgb(255, 0, 0)', '#00f', 'yellow', '#888', 'pink', 'orange'];
+		//컬러코드
+		var colorName = ['빨강', '파랑', '노랑', '회색', '핑크', '주황'];
+		
+		var tag = "<select>";
+		//					  값, index
+		colorName.map(function(i, j){
+			tag += "<option value='"+rgb[j]+"'>"+i+"</option>";
+		});
+		tag += "</select>";
+		
+		$('body').prepend(tag);
+		
+		///////////////////////////////////////////////////////////////////////////////////
+		
+		$('select').change(function(){
+			$('div').css('color', $('select').val());	//$(this).val();
+		});
+		
+		$('input[type=button]').on('click', function(){
+			//이벤트가 발생한 버튼의 index를 구한다.
+			var idx = $('input[type=button]').index(this);
+			
+			//현재 글자 크기
+			var nowSize = parseInt($('div').css('font-size'));
+			console.log(nowSize);
+			
+			if(idx==0){
+				$('div').css('font-size', nowSize-1 +'px');
+			}else if(idx==1){
+				$('div').css('font-size', '16px');
+			}else if(idx==2){
+				$('div').css('font-size', nowSize+1 +'px');
+			}
+		});
+		
+		
+	});
+</script>
+</head>
+<body>
+	<input type='button' value='-'/>
+	<input type='button' value='0'/>
+	<input type='button' value='+'/>
+	<div>
+	이탈리안 하이퍼포먼스 럭셔리카 마세라티가 기블리, 콰트로포르테, 르반떼가 부분 변경을 적용하며, 새롭게 출시됐다. 새롭게 선보이는 모델에서는 
+	스타일 측면에서의 변화와 인포테인먼트 시스템의 업그레이드가 가장 눈에 띈다. 이번 부분 변경 모델의 개발 초기,목표로 설정되었던 부분은 기블리, 
+	콰트로포르테, 르반떼 모델 사이의 공통 된 언어를 만들고, 이를 공유하면서 마세라티 전 라인업에 일관된 정체성을 부여하는 것이었다. 새로운 프런트 
+	그릴과 3200 GT에서 영감을 받은 부메랑 형태의 테일 램프 등이 부분 변경을 거친 기블리, 콰트로포르테, 르반떼를 한 눈에 알아볼 수 있게 하는 디자인 
+	요소이다. 이번 부분 변경을 통해 동일한 디자인 언어가 마세라티의 전 모델을 관통하며, 적용되었다. 물론, 세 모델 각각에 국한된 변화도 있지만 공통적인 
+	디자인 철학을 공유하고 있다.
+	출처 : 모토야(https://auto.nate.com)
+	</div>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>스틸하우스</title>
+<style>
+   
+   ul,li{margin:0; padding:0; list-style-type:none;}
+   
+   
+   nav a:link, a:visited, a:active{ 
+         font-size:1.3em;
+         text-decoration:none;
+         color:#fff;
+   }
+   nav a:hover{
+         font-size:1.3em;
+         text-decoration:none;
+         color:yellow;
+   }
+   
+   body{background-color:rgb(146,204,101);}
+   
+   .container{
+      width:1050px;
+      background-color:#fff;
+      margin: 0px auto;
+      
+      }
+   header{
+      padding-left:165px; /*패딩을 165로 주면 그만큼 공백이 생기기때문에 흰 화면이 생긴다.*/
+      height:334px;
+   }
+   
+   /*메인메뉴*/
+   nav{ overflow:auto;}
+   nav>*,nav li,section>div{float:left;} 
+   nav>ul{background-color:rgb(99,186,36)}
+   
+   nav li{height:72px;line-height:72px; padding:0 25px; }/*글자 간격 주는거*/
+   
+   .sub_header{height:105px;}
+   
+   /*new, gallery*/
+   section{
+      padding-left:165px;
+      background-color:yellow;
+   
+      /*공간 반납하는데 그걸 방지하는거 overflow:auto; 일단은 정렬 한다음에 안보이면 높이주고, clear left 주면됌  */
+   }
+   
+   section>div:first-of-type{
+      margin-right:85px;
+   }
+   
+
+     /*자주하는질문 질문과 답변 칸정렬*/
+      section>div:first-of-type li{
+         border:3px solid #ccc;
+         padding: 5px;
+         margin: 8px 0px    
+      }
+      section a:link, section a:hover, section a:visited{
+         color:gray; text-decoration: none;
+      }
+      
+      /*gallery*/
+      section>div:last-of-type{width:367px; font-size:0.9em;}
+      section>div:last-of-type li{
+         float:left;
+         height:100px;
+      }
+      section>div:last-of-type>ul img{width:87.5px; margin:2px;}
+      footer{
+         padding-left:175px;
+      }
+   </style>
+   
+   
+   
+
+</head>
+<body>
+<div class="container">
+   <header>
+      <img src="css_gaon_02.jpg"/><img src="css_gaon_03.jpg"/><img src="css_gaon_04.jpg"/><img src="css_gaon_05.jpg"/><img src="css_gaon_06.jpg"/>
+   </header> <!-- 이미지는inline 요소여서 공백의 영향을 받는다. -->
+   <nav><!-- 보통 우리가 쓰는hedder 이라고 생각하면 된다 -->
+      <img src="css_gaon_08.jpg"/>
+      <ul>
+         <li><a href="">COMPANY</a></li>
+         <li><a href="">STEELHOUSE</a></li>
+         <li><a href="">ARCHITECTURE</a></li>
+         <li><a href="">INTERIOR</a></li>
+         <li><a href="">COMMUNITY</a></li>
+      </ul>
+   </nav>
+   <header class="sub_header">
+      <img src="css_gaon_15.jpg"/><img src="css_gaon_16.jpg"/><img src="css_gaon_17.jpg"/><img src="css_gaon_18.jpg"/><img src="css_gaon_19.jpg"/>
+   </header>
+   <section>
+   
+   
+      <div><img src="css_gaon_22.jpg"/>
+         <ul>
+            <li>01.<a href="#"> 자주하는 질문</a></li>
+            <li>02.<a href="#"> 질문과 답변</a></li>
+            <li>03.<a href="#"> 채용 안내</a></li>
+         </ul>
+      
+      </div>
+      <div><img src="css_gaon_24.jpg"/>
+         <ul>
+            <li><a href="#"><img src="g1.png"/><br/>멋진 인테리어</a></li>
+            <li><a href="#"><img src="g2.png"/><br/>이쁜 실내</a></li>
+            <li><a href="#"><img src="g3.png"/><br/>아파트 단지</a></li>
+            <li><a href="#"><img src="g1.png"/><br/>회의실 내부</a></li>
+            <li><a href="#"><img src="g2.png"/><br/>멋진 인테리어</a></li>
+            <li><a href="#"><img src="g3.png"/><br/>이쁜 실내</a></li>
+            <li><a href="#"><img src="g1.png"/><br/>아파트 단지</a></li>
+            <li><a href="#"><img src="g2.png"/><br/>회의실 내부</a></li>
+         </ul>
+      </div>
+   </section>
+   <footer>
+      <img src="css_gaon_31.jpg"/>
+   </footer>
+   
+
+</div>
+</body>
+</html>

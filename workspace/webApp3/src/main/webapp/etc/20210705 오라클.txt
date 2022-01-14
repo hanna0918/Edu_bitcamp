@@ -1,0 +1,66 @@
+select*from emp;
+select * from tab;
+select abs(-1234) from dual; --dual이라는 가상 테이블을 사용하면된다 -가 없는 필드니까
+select abs (-1234)"absolute" from dual;
+select abs (sal) from sal;
+
+-- sal은 db 에 있는 필드니깐 테이블안에 실수가없으니깐 상수쓰는거
+--올림(ceil) : 현재 값보다 큰 정수 
+--버림(floor) : 현재 값 보다 작은 정수
+
+select ceil(15.1),floor(15.9) from dual;
+
+--반올림(round) : 현재값의 반올림
+--round(n),        round(n,m)([]) 대괄호는 필요없으면 실행안함 
+--                  m은 소수이하의 표시되는 자릿수, 반올림위치는 m+1에서 반올림 된다.
+select round(56.7), round(56.72989,1) from dual; --소수이하 한자리수까지보여,56.72989,2(소수이하 두자리까지보여)
+
+--나머지 구하기 급여를 1000으로 나눈 나머지를 구하여라 자바에서는 %
+select mod(sal,1000) from emp; 
+-- 거듭제곱 3을 4번 곱한다는 뜻 
+select power(3,4) from dual;
+-- turnc(); 버림              정수부분 첫번째 자리를 버림
+select trunc(53.1542,2),trunc(53.1542,-1) from dual;
+
+
+--문자열 함수 
+-- concat():문자열 연결 ename때문에 emp를 쓰는거다.
+select concat(ename,'님')사원명 from emp;
+
+--initcap() : 각단어의 첫번째 문자를 대문자로 변환
+select initcap('inicap string test')from dual;
+--lower():전부다 소문자로 변환
+select lower (ename) from emp;
+
+--upper():전부다 대문자로 변환
+select upper ('upper string test') from dual;
+
+--LPAD() : 남은 왼쪽 자리에 원하는 문자를 표시
+--RPAD() : 남은 오른쪽 자리에 원하는 문자를 표시
+select lpad(ename,10,'*'),rpad(ename,10,'$') from emp;
+
+--substr():일부 문자열 구하기
+select job ,substr(job,2,3), substr(job,-3,2)from emp;
+
+--length() : 문자수
+select ename, length(ename) from emp;
+select length('홍길동')from dual; --글자
+
+--replace : 특정문자를 다른 문자로 치환한다.
+select ename, replace(ename,'A',' 에이')from emp;
+--이름을 글자길이의 50프로만큼 출력하고 나머지는 문자 *로 출력해라)
+select ename,lpad(ename,5,'*')from emp;--내가한거 \
+--select ename, rpad(substr(ename,1,ceil(length(ename/2)),length(ename),'*')"rapd" from emp;
+--select enmae, rpad(substr(ename,1,floor(length(ename)/2)), length(ename),'*') "rapd" from emp;
+select rpad(substr(ename, 1, ceil(length(ename)/2)), length(ename), '*') from emp;--희수정답
+
+--instr : 특정문자의 위치구하기 , 없으면 0
+select job, instr(job,'S')from emp;
+select job, instr(job,'S',3) from emp;
+-- ANALYST  두번째 A는 있지만 끝에서 두번째 A가 없기때문에 0이나옴
+SELECT JOB, INSTR(JOB,'A',2,2)FROM EMP;
+
+--이메일을 이용하여 아이디와 도메인이 분리되어라.
+--@ 기준점이 되어서 메일이랑 도메인이 분리되어야 되는데
+     select concat('lyh4671','@naver.com') from dual; -- concat이 합치는거니깐 @를 기준으로 떨어트려 놓으면되는건데 안되네;
+     select sub('lyh4671','@naver.com') from dual;

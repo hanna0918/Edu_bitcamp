@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>영화포스터</title>
+<style>
+	#frame{
+		margin:0 auto;
+		padding:0;
+		width:879px;
+		height:114px;
+		border:1px solid gray;
+		overflow:hidden;
+	}
+	#frame>button:first-of-type{
+		margin:0;
+		padding:0;
+		width:30px;
+		height:114px;
+		float:left;
+	}
+	#frame>button:last-of-type{
+		margin:0;
+		padding:0;
+		width:30px;
+		height:114px;
+		float:right;
+	}
+	#slide{
+		width:1640px;
+		height:114px;
+	}
+</style>
+<script>
+	var interval;
+	function scrollMove(){
+		window.scrollBy(10, 0);
+		
+	}
+	function moveStart(){
+		//1초에 한번씩 스크롤(y)를 이동하는 함수를 호출한다.
+		//			호출함수			호출시간간격(밀리초)
+		interval = setInterval("scrollMove()", 200);
+	}
+
+</script>
+</head>
+<body>
+	<div id="frame" onload="moveStart()">
+		<button>◀</button>
+		<button>▶</button>
+			<div id="slide" ><img src="movie01.png"><img src="movie02.png"><img src="movie03.png"><img src="movie04.png"><img src="movie05.png"><img src="movie06.png"><img src="movie07.png"><img src="movie08.png"><img src="movie09.png"><img src="movie10.png"><img src="movie11.png"><img src="movie12.png"><img src="movie13.png"><img src="movie14.png"><img src="movie15.png"><img src="movie16.png"><img src="movie17.png"><img src="movie18.png"><img src="movie19.png"><img src="movie20.png"></div>
+	</div>
+
+</body>
+</html>
